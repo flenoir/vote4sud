@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140114213604) do
+ActiveRecord::Schema.define(version: 20140115131444) do
+
+  create_table "candidats", force: true do |t|
+    t.string   "nom"
+    t.string   "prenom"
+    t.string   "parti"
+    t.float    "voix"
+    t.boolean  "elu"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

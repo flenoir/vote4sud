@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom: MyString
+  prenom: MyString
+  parti: MyString
+  voix: 1.5
+  elu: false
+
+two:
+  nom: MyString
+  prenom: MyString
+  parti: MyString
+  voix: 1.5
+  elu: false
