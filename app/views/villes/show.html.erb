@@ -1,0 +1,15 @@
+<p>
+  <strong>Nom:</strong>
+  <%= @ville.nom %>
+</p>
+ 
+<p>
+  <strong>Département:</strong>
+  <%= @ville.departement %>
+  
+</p>
+<%= @ville.candidats %>
+
+
+<%= link_to 'Back', villes_path %>
+| <%= link_to 'Edit', edit_ville_path(@ville) %>
