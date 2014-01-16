@@ -6,9 +6,35 @@
 <p>
   <strong>Département:</strong>
   <%= @ville.departement %>
-  
+
 </p>
-<%= @ville.candidats %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Parti</th>
+      <th>Voix</th>
+      <th>Elu</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+	<tbody>
+	<% @ville.candidats.each do |c| %>
+      <tr>
+        <td><%= c.nom %></td>
+        <td><%= c.prenom %></td>
+        <td><%= c.parti %></td>
+        <td><%= c.voix %></td>
+        <td><%= c.elu %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 
 <%= link_to 'Back', villes_path %>
