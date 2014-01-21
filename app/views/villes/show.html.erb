@@ -9,7 +9,8 @@
 
 </p>
 
-<table>
+
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Nom</th>
@@ -30,7 +31,9 @@
         <td><%= c.prenom %></td>
         <td><%= c.parti %></td>
         <td><%= c.voix %></td>
-        <td><%= c.elu %></td>
+        <td><%= check_box_tag c.elu %></td>
+        <td><%= link_to 'Edit', edit_candidat_path(c) %> </td>
+        
       </tr>
     <% end %>
   </tbody>

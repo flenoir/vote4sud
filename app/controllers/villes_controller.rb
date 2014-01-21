@@ -11,6 +11,9 @@ class VillesController < ApplicationController
   @ville = Ville.find(params[:id])
 	end
 
+
+
+
 	def edit
   	@ville = Ville.find(params[:id])
 	end
