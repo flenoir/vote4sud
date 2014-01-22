@@ -4,14 +4,18 @@ class VillesController < ApplicationController
 	end
 
 	def index
-  @villes = Ville.all
+    @villes = Ville.all
 	end
 
 	def show
   @ville = Ville.find(params[:id])
 	end
 
-
+	# voir si obligatoire pour filtrer les départements
+	# def showdepartement
+    # @ville = Ville.find(params[:id])
+    # detpt = Ville.where(departement: 'Hérault')
+	# end
 
 
 	def edit

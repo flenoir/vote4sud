@@ -7,8 +7,9 @@
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Choix département <span class="caret"></span></button>
         <ul class="dropdown-menu dropdown-menu pull-right">
           <% @villes.each do |ville| %>
+         
           
-          <li><%= link_to ville.nom, ville %></li>
+          <li><%= link_to ville.departement, ville %></li>
             <% end %>
            
             <li><%= link_to "Gard", villes_path %></li>
@@ -21,6 +22,37 @@
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
 </div><!-- /fin de row -->
+
+
+
+
+
+
+
+<table class="table table-hover table-responsive">
+  <tr>
+    <th>Nom</th>
+    <th>Département</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+  <% detpt = Ville.where(departement: 'Hérault') %>
+  <% detpt.each do |ville| %>
+    <tr>
+      <td><%= ville.nom %></td>
+      <td><%= ville.departement %></td>
+      <td><%= link_to 'Show', ville %></td>
+      <td><%= link_to 'Edit', edit_ville_path(ville) %></td>
+      <td><%= link_to 'Destroy', ville_path(ville),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+
+
+  <% end %>
+</table>
+
 
 
 

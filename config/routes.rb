@@ -2,8 +2,13 @@ Vote4sud::Application.routes.draw do
   resources :candidats, :villes
 
 
+
+
   devise_for :users
   get 'about' => 'pages#about'
+  
+
+
 
 
   
