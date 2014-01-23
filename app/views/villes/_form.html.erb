@@ -12,15 +12,17 @@
   <% end %>
   <p>
     <%= f.label :nom %><br>
-    <%= f.text_field :nom %>
+    <%= f.text_field :nom, class: "form-control" %>
   </p>
  
   <p>
     <%= f.label :departement %><br>
-    <%= f.text_field :departement %>
+    <% filtre = Ville.find(:all, :group => "departement") %> <!-- filtrage pour ne pas avoir tous les départements dupliqués mais seulement une entree par département %> -->
+    <%= f.collection_select :departement, filtre, :departement, :departement,  {:prompt => true}, class: "form-control" %>
+    
   </p>
  
   <p>
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary" %>
   </p>
 <% end %>

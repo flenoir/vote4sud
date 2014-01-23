@@ -1,27 +1,32 @@
 <h1>Listing villes</h1>
 
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Choix département <span class="caret"></span></button>
-        <ul class="dropdown-menu dropdown-menu pull-right">
-          <% @villes.each do |ville| %>
-         
-          
-          <li><%= link_to ville.departement, ville %></li>
-            <% end %>
+<!-- Single button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    Choix département <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <% display = Ville.find(:all, :group => "departement")  %>
+           <% display.each do |ville| %>
+           <% departmt =  ville.departement %>
+             <li><%= link_to departmt, villes_path %></li>
+        
+           <% end %>
            
-            <li><%= link_to "Gard", villes_path %></li>
+          <li><%= link_to "Gard", villes_path %></li>
+
+  </ul>
+</div>
 
 
-          
-        </ul>
-      </div><!-- /btn-group -->
-      <input type="text" class="form-control">
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div><!-- /fin de row -->
+
+<!--  <%= display.find(:departement) %>  stocker ds un array -->
+
+<% display.each do |v| %>
+<li><%= @listed = v.departement %></li>
+<% end %>
+
+
 
 
 
@@ -38,7 +43,7 @@
     <th></th>
   </tr>
  
-  <% detpt = Ville.where(departement: 'Hérault') %>
+  <% detpt = Ville.where(departement: @listed) %>
   <% detpt.each do |ville| %>
     <tr>
       <td><%= ville.nom %></td>
@@ -66,7 +71,7 @@
     <th></th>
   </tr>
  
-  <% @villes.each do |ville| %>
+  <% @villes.order("nom ASC").each do |ville| %>
     <tr>
       <td><%= ville.nom %></td>
       <td><%= ville.departement %></td>

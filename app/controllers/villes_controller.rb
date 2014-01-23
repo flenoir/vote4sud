@@ -16,7 +16,7 @@ class VillesController < ApplicationController
     # @ville = Ville.find(params[:id])
     # detpt = Ville.where(departement: 'Hérault')
 	# end
-
+  
 
 	def edit
   	@ville = Ville.find(params[:id])
