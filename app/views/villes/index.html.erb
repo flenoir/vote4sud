@@ -6,10 +6,10 @@
     Choix département <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-    <% display = Ville.find(:all, :group => "departement")  %>
-           <% display.each do |ville| %>
-           <% departmt =  ville.departement %>
-             <li><%= link_to departmt, villes_path %></li>
+    <% @display = Ville.find(:all, :group => "departement")  %>
+           <% @display.each do |ville| %>
+           <% @departmt =  ville.departement %>
+             <li><%= link_to @departmt, villes_path %></li>
         
            <% end %>
            
@@ -18,21 +18,7 @@
   </ul>
 </div>
 
-
-
-<!--  <%= display.find(:departement) %>  stocker ds un array -->
-
-<% display.each do |v| %>
-<li><%= @listed = v.departement %></li>
-<% end %>
-
-
-
-
-
-
-
-
+ <%= @display[0].departement %>
 
 <table class="table table-hover table-responsive">
   <tr>
@@ -43,7 +29,7 @@
     <th></th>
   </tr>
  
-  <% detpt = Ville.where(departement: @listed) %>
+  <% detpt = Ville.where(departement: @departmt) %>
   <% detpt.each do |ville| %>
     <tr>
       <td><%= ville.nom %></td>
@@ -76,6 +62,8 @@
       <td><%= ville.nom %></td>
       <td><%= ville.departement %></td>
       <td><%= link_to 'Show', ville %></td>
+      <td><%= link_to 'Infographie', infographie_path(ville) %></td>
+
       <td><%= link_to 'Edit', edit_ville_path(ville) %></td>
       <td><%= link_to 'Destroy', ville_path(ville),
                     method: :delete, data: { confirm: 'Are you sure?' } %></td>

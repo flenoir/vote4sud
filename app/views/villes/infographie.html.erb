@@ -1,0 +1,45 @@
+<p>
+  <strong>Nom:</strong>
+  <%= @ville.nom %>
+</p>
+ 
+<p>
+  <strong>Département:</strong>
+  <%= @ville.departement %>
+  <h2>infographie</h2>
+
+</p>
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Parti</th>
+      <th>Voix</th>
+      <th>Elu</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+	<tbody>
+	<% @ville.candidats.each do |c| %>
+      <tr>
+        <td><%= c.nom %></td>
+        <td><%= c.prenom %></td>
+        <td><%= c.parti %></td>
+        <td><%= c.voix %></td>
+        <td><%= check_box_tag c.elu %></td>
+        <td><%= link_to 'Edit', edit_candidat_path(c) %> </td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'Back', villes_path %>
+| <%= link_to 'Edit', edit_ville_path(@ville) %>

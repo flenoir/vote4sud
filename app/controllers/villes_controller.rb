@@ -1,4 +1,9 @@
+
+
 class VillesController < ApplicationController
+
+layout 'infographie_villes', only: [:infographie]
+
 	def new
 		@ville = Ville.new
 	end
@@ -8,8 +13,13 @@ class VillesController < ApplicationController
 	end
 
 	def show
-  @ville = Ville.find(params[:id])
+    @ville = Ville.find(params[:id])
 	end
+
+	def infographie
+    @ville = Ville.find(params[:id])
+	end
+
 
 	# voir si obligatoire pour filtrer les départements
 	# def showdepartement
