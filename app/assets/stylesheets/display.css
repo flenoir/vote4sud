@@ -1,0 +1,93 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+body 
+{
+	 padding-top: 60px; 
+	 padding-left: 60px;
+	 background-image:url('carton_municipales_draft.png'); 
+	 background-repeat:no-repeat;
+	 background-position: 0px 50px;
+} 
+
+}
+
+.barre{
+	color: #FFF;
+}
+
+.results{
+	color: #FFF;
+	padding-left: 350px;
+	margin-top: 30px;
+}
+
+.city{
+	position: absolute;
+	color: #FFF;
+	padding-left: 350px;
+	margin-top: 20px;
+}
+
+.district{
+	position: absolute;
+	color: #FFF;
+	padding-left: 600px;
+	margin-top: 25px;
+}
+
+#table_candidats {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+
+}
+
+#table_body{
+	position: absolute;
+	margin-top: 100px;
+	margin-left: 140px;
+}
+
+
+#table_candidats tr.tabletr  {
+	
+}
+
+table, td /* ajout d'une bordure transparente dans la table, modifier transparent en white pour la voir*/
+{
+border:10px solid transparent;
+}
+
+tr:nth-child(odd){       /* colorisation alternée des lignes du tableau */
+    background:#005c77;}
+
+tr:nth-child(even){
+    background:#d60819;}
+
+
+#table_candidats td.tablenom  {
+	color: #FFF;
+	font-size: 30px;
+}
+
+#table_candidats td.tableprenom  {
+	color: #FFF;
+	text-align: right;
+	font-size: 28px;
+}
+
+#table_candidats td.tablevoix  {
+	color: #FFF;
+	font-size: 40px;
+}
+
+#table_candidats td.tableelu  {
+	color: #FFF;
+	font-size: 20px;
+	font-style: italic;
+}
+
+
+
+
+

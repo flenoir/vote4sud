@@ -1,8 +1,9 @@
 
 
 class VillesController < ApplicationController
+ 
+ layout 'infographie', :only => :infographie
 
-layout 'infographie_villes', only: [:infographie]
 
 	def new
 		@ville = Ville.new

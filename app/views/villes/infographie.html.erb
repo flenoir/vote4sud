@@ -1,45 +1,36 @@
-<p>
-  <strong>Nom:</strong>
-  <%= @ville.nom %>
-</p>
- 
-<p>
-  <strong>Département:</strong>
-  <%= @ville.departement %>
-  <h2>infographie</h2>
-
-</p>
+<% content_for :head do %>
+<%= stylesheet_link_tag 'display' %>
+<% end %>
 
 
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Nom</th>
-      <th>Prenom</th>
-      <th>Parti</th>
-      <th>Voix</th>
-      <th>Elu</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<h1 class = 'results'>RESULTATS - 1er TOUR</h1>
 
-	<tbody>
-	<% @ville.candidats.each do |c| %>
-      <tr>
-        <td><%= c.nom %></td>
-        <td><%= c.prenom %></td>
-        <td><%= c.parti %></td>
-        <td><%= c.voix %></td>
-        <td><%= check_box_tag c.elu %></td>
-        <td><%= link_to 'Edit', edit_candidat_path(c) %> </td>
-        
+<h2 class = 'city'><%= @ville.nom %></h2>
+<h3 class = 'district'><%= @ville.departement %></h3>
+
+<table id ="table_candidats">
+
+  <tbody id = 'table_body'>
+  <% @ville.candidats.each do |c| %>
+      <tr class ='tabletr'>
+        <td class = 'tableprenom'><%= c.prenom %></td>
+        <td></td>
+        <td class ='tablenom'><%= c.nom.upcase %></td>
+        <td>(<%= c.parti %>)</td>
+        <td class ='tablevoix'><%= c.voix %> %</td>
+        <td><% if c.elu == false %></td> 
+        <td><%=  "pas elu" %></td>
+        <% else %>
+        <td class = 'tableelu'><%= "elu" %></td>
+        <% end %>
+
+
+
+
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
 
-<%= link_to 'Back', villes_path %>
-| <%= link_to 'Edit', edit_ville_path(@ville) %>
