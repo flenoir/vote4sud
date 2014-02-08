@@ -29,7 +29,7 @@ class CandidatsController < ApplicationController
 
     respond_to do |format|
       if @candidat.save
-        format.html { redirect_to @candidat, notice: 'Candidat was successfully created.' }
+        format.html { redirect_to @candidat, notice: 'Le nouveau candidat a bien été entré' }
         format.json { render action: 'show', status: :created, location: @candidat }
       else
         format.html { render action: 'new' }
@@ -43,7 +43,7 @@ class CandidatsController < ApplicationController
   def update
     respond_to do |format|
       if @candidat.update(candidat_params)
-        format.html { redirect_to @candidat, notice: 'Candidat was successfully updated.' }
+        format.html { redirect_to @candidat, notice: 'Le candidat a bien été mis à jour' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

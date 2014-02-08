@@ -1,7 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Cette petite application est destinée à saisir et utiliser les résultats des votes des élections municipales 2014. 
+
+Les informations entrées sont liées aux départments suivants ( Hérault, Gard, Bouches du Rhone, Aude et Pyrénées orientales). 
+
+
 
 Things you may want to cover:
 
