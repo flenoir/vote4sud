@@ -20,10 +20,10 @@ test:
 
 production:
   adapter: postgresql
-  database: de0m725cuh8ji0
-  username: czqxujbuioaujl
-  password: EUPD77cvfXxH47vi7rLK4k6zFS
-  host: ec2-184-73-194-196.compute-1.amazonaws.com
+  database: db/production.sqlite3
+  username: 
+  password: 
+  host: localhost
   pool: 5
   timeout: 5000
 
