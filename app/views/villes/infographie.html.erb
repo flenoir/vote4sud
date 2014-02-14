@@ -2,7 +2,6 @@
 <%= stylesheet_link_tag 'display' %>
 <% end %>
 
-
 <h1 class = 'results'>RESULTATS - 1er TOUR</h1>
 
 <h2 class = 'city'><%= @ville.nom %></h2>
@@ -26,11 +25,17 @@
 
 
 
-
       </tr>
     <% end %>
+
+<p>
+  <% kit = IMGKit.new('http://www.yidaki.fr', :quality => 100) %>
+  <% file = kit.to_file(Rails.root + "filekittt.png") %>
+ 
+</p>
+
   </tbody>
 </table>
 </div>
 
-
+ 

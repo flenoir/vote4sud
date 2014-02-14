@@ -49,4 +49,11 @@ ActiveRecord::Schema.define(version: 20140115225205) do
     t.datetime "updated_at"
   end
 
+  create_table "villes3", force: true do |t|
+    t.string   "nom"
+    t.string   "departement"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end

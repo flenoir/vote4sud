@@ -2,6 +2,10 @@ Vote4sud::Application.routes.draw do
   resources :candidats, :villes
 
 
+
+
+
+
 get 'infographie/:id' => 'villes#infographie', :as => 'infographie'
 
 

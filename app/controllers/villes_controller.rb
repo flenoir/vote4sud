@@ -1,5 +1,3 @@
-
-
 class VillesController < ApplicationController
  
  layout 'infographie', :only => :infographie
@@ -21,6 +19,12 @@ class VillesController < ApplicationController
     @ville = Ville.find(params[:id])
 	end
 
+
+	def kit
+    	@kit = IMGKit.new('http://www.yidaki.fr', :quality => 50)
+    	# Save to a file
+    	file = @kit.to_file(Rails.root + "filekittt.png")
+	end
 
 	# voir si obligatoire pour filtrer les départements
 	# def showdepartement

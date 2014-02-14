@@ -5,6 +5,8 @@ gem 'rails', '4.0.1'
 gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
+gem 'imgkit'
+
 
 group :production do
 	gem 'pg'
