@@ -17,7 +17,7 @@
  
   <p>
     <%= f.label :departement %><br>
-    <% filtre = Ville.find(:all, :group => "departement") %> <!-- filtrage pour ne pas avoir tous les départements dupliqués mais seulement une entree par département %> -->
+    <% filtre = Ville.find(:all, :select => ("DISTINCT(departement)")) %> <!-- filtrage pour ne pas avoir tous les départements dupliqués mais seulement une entree par département %> -->
     <%= f.collection_select :departement, filtre, :departement, :departement,  {:prompt => true}, class: "form-control" %>
     
   </p>
