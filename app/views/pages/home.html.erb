@@ -1,3 +1,8 @@
+<% if user_signed_in? %>
+
+<h1>Vous êtes connectés, vous pouvez utiliser l'application</h1>
+
+<% else %>
 <div class="jumbotron">
 <h1>Vote 4 Sud</h1>
 <p>L'application pour saisir et analyser les résultats des Municipales</p>
@@ -6,3 +11,5 @@
 	<%= link_to "Enregistrez-vous", new_user_registration_path , class: "btn btn-primary btn-large" %>
 </p>
 </div>
+
+<% end %>
