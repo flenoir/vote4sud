@@ -4,7 +4,7 @@
 */
 body 
 {
-	 padding-top: 60px; 
+	 padding-top: 50px; 
 	 padding-left: 60px;
 	 background-image:url('carton_municipales_draft.png'); 
 	 background-repeat:no-repeat;
@@ -20,7 +20,7 @@ body
 .results{
 	color: #FFF;
 	padding-left: 350px;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 .city{
@@ -50,12 +50,14 @@ body
 
 
 #table_candidats tr.tabletr  {
-	
+	display: block; height: 53px; width: 800px;
 }
 
 table, td /* ajout d'une bordure transparente dans la table, modifier transparent en white pour la voir*/
 {
-border:10px solid transparent;
+border:2px solid transparent;
+padding-left: 10px;
+/* border: 1px solid green; pour aligner le tableau */ 
 }
 
 tr:nth-child(odd){       /* colorisation alternée des lignes du tableau */
@@ -67,24 +69,35 @@ tr:nth-child(even){
 
 #table_candidats td.tablenom  {
 	color: #FFF;
-	font-size: 30px;
+	font-size: 20px;
+	width:200px;
 }
 
 #table_candidats td.tableprenom  {
 	color: #FFF;
 	text-align: right;
-	font-size: 28px;
+	font-size: 20px;
+	width:200px;
+}
+
+#table_candidats td.tableparti  {
+	color: #FFF;
+	font-size: 14px;
+	font-style: italic;
+	width:100px;
 }
 
 #table_candidats td.tablevoix  {
 	color: #FFF;
-	font-size: 40px;
+	font-size: 35px;
+	width:200px;
 }
 
 #table_candidats td.tableelu  {
 	color: #FFF;
 	font-size: 20px;
 	font-style: italic;
+	width:60px;
 }
 
 

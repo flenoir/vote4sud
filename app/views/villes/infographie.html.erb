@@ -15,10 +15,10 @@
         <td class = 'tableprenom'><%= c.prenom %></td>
         <td></td>
         <td class ='tablenom'><%= c.nom.upcase %></td>
-        <td>(<%= c.parti %>)</td>
+        <td class ='tableparti'><%= c.parti.upcase %></td>
         <td class ='tablevoix'><%= c.voix %> %</td>
         <td><% if c.elu == false %></td> 
-        <td><%=  "pas elu" %></td>
+        <td><%=  "" %></td>
         <% else %>
         <td class = 'tableelu'><%= "elu" %></td>
         <% end %>
@@ -28,14 +28,19 @@
       </tr>
     <% end %>
 
-<p>
-  <% kit = IMGKit.new('http://www.yidaki.fr', :quality => 100) %>
-  <% file = kit.to_file(Rails.root + "filekittt.png") %>
- 
-</p>
-
   </tbody>
 </table>
+
+</div>
+
+
+<div>
+
+  <p>
+  <% kit = IMGKit.new(infographie_path(@ville), :quality => 100) %>
+  <% file = kit.to_file(Rails.root + "filekittt.png") %>
+</p>
+
 </div>
 
  
