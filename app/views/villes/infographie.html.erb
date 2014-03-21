@@ -10,9 +10,9 @@
 <table id ="table_candidats">
 
   <tbody id = 'table_body'>
-  <% @ville.candidats.each do |c| %>
+  <% @ville.candidats.order("nom ASC").each do |c| %>
       <tr class ='tabletr'>
-        <td class = 'tableprenom'><%= c.prenom %></td>
+        <td class = 'tableprenom'><%= c.prenom.upcase %></td>
         <td></td>
         <td class ='tablenom'><%= c.nom.upcase %></td>
         <td class ='tableparti'><%= c.parti.upcase %></td>

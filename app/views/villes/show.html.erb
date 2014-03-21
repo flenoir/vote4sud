@@ -27,7 +27,7 @@
   </thead>
 
 	<tbody>
-	<% @ville.candidats.each do |c| %>
+	<% @ville.candidats.order("nom ASC").each do |c| %>
       <tr>
         <td><%= c.nom %></td>
         <td><%= c.prenom %></td>
