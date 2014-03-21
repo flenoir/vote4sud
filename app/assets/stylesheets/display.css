@@ -6,7 +6,7 @@ body
 {
 	 padding-top: 50px; 
 	 padding-left: 60px;
-	 background-image:url('carton_municipales_draft.png'); 
+	 background-image:url('carton_municipales.png'); 
 	 background-repeat:no-repeat;
 	 background-position: 0px 50px;
 } 
@@ -69,8 +69,8 @@ tr:nth-child(even){
 
 #table_candidats td.tablenom  {
 	color: #FFF;
-	font-size: 28px;
-	width:200px;
+	font-size: 26px;
+	width:300px;
 }
 
 #table_candidats td.tableprenom  {
@@ -82,9 +82,9 @@ tr:nth-child(even){
 
 #table_candidats td.tableparti  {
 	color: #FFF;
-	font-size: 28px;
+	font-size: 24px;
 	font-style: italic;
-	width:100px;
+	width:160px;
 }
 
 #table_candidats td.tablevoix  {
