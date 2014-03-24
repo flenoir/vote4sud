@@ -10,7 +10,7 @@
 <table id ="table_candidats">
 
   <tbody id = 'table_body'>
-  <% @ville.candidats.order("nom ASC").each do |c| %>
+  <% @ville.candidats.order("voix DESC").each do |c| %>
       <tr class ='tabletr'>
         <td class = 'tableprenom'><%= c.prenom.upcase %></td>
         <td></td>
